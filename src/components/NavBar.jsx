@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-export default function Navbar(){
+export default function navbar(){
 
   const linkStyle = ({ isActive }) =>
     isActive
