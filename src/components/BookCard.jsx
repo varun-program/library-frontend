@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export default function Bookcard({ book }) {
+export default function BookCard({ book }) {
 
   const borrow = async () => {
     try {

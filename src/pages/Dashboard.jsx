@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import BookCard from "../components/Bookcard"
+import BookCard from "../components/BookCard"
 
 export default function Dashboard(){
 
