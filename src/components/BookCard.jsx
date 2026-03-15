@@ -1,10 +1,10 @@
 import axios from "axios"
 
-export default function bookcard({ book }) {
+export default function Bookcard({ book }) {
 
   const borrow = async () => {
     try {
-      await axios.post(`http://127.0.0.1:8000/borrow/${book.id}`)
+      await axios.post(`https://library-backend.onrender.com/borrow/${book.id}`)
       window.location.reload()
     } catch (error) {
       alert("Failed to borrow book")
@@ -13,7 +13,7 @@ export default function bookcard({ book }) {
 
   const returnBook = async () => {
     try {
-      await axios.post(`http://127.0.0.1:8000/return/${book.id}`)
+      await axios.post(`https://library-backend.onrender.com/return/${book.id}`)
       window.location.reload()
     } catch (error) {
       alert("Failed to return book")
