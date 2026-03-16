@@ -10,12 +10,21 @@ fetchBooks()
 },[])
 
 const fetchBooks = async ()=>{
+try{
 const res = await axios.get("https://library-backend-1z5w.onrender.com/books")
+setBooks(res.data)   // ⭐ FIX: store books
+}catch(err){
+console.error("Error fetching books:", err)
+}
 }
 
 const deleteBook = async(id)=>{
+try{
 await axios.delete(`https://library-backend-1z5w.onrender.com/delete-book/${id}`)
 fetchBooks()
+}catch(err){
+console.error("Error deleting book:", err)
+}
 }
 
 return(
@@ -44,7 +53,14 @@ All Books
 
 <tbody>
 
-{books.map((b)=>(
+{books.length === 0 ? (
+<tr>
+<td colSpan="5" className="p-6 text-center text-gray-400">
+No books available
+</td>
+</tr>
+) : (
+books.map((b)=>(
 <tr key={b.id} className="border-t border-slate-800">
 
 <td className="p-4">{b.title}</td>
@@ -71,7 +87,8 @@ Delete
 </td>
 
 </tr>
-))}
+))
+)}
 
 </tbody>
 
