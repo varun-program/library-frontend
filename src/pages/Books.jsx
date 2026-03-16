@@ -11,7 +11,6 @@ fetchBooks()
 
 const fetchBooks = async ()=>{
 const res = await axios.get("https://library-backend-1z5w.onrender.com/books")
-setBooks(res.data)
 }
 
 const deleteBook = async(id)=>{
