@@ -11,7 +11,7 @@ const [error,setError] = useState(null)
 
 useEffect(()=>{
 
-axios.get("https://library-backend.onrender.com/add-book")
+axios.get("https://library-backend-1z5w.onrender.com/book")
 .then(res=>{
 setBooks(res.data)
 setLoading(false)

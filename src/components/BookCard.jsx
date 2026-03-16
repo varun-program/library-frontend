@@ -4,7 +4,7 @@ export default function BookCard({ book }) {
 
   const borrow = async () => {
     try {
-      await axios.post(`https://library-backend.onrender.com/borrow/${book.id}`)
+      await axios.post(`https://library-backend-1z5w.onrender.com/borrow/${book.id}`)
       window.location.reload()
     } catch (error) {
       alert("Failed to borrow book")
@@ -13,7 +13,7 @@ export default function BookCard({ book }) {
 
   const returnBook = async () => {
     try {
-      await axios.post(`https://library-backend.onrender.com/return/${book.id}`)
+      await axios.post(`https://library-backend-1z5w.onrender.com/return/${book.id}`)
       window.location.reload()
     } catch (error) {
       alert("Failed to return book")

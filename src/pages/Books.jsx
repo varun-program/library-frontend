@@ -10,12 +10,12 @@ fetchBooks()
 },[])
 
 const fetchBooks = async ()=>{
-const res = await axios.get("http://127.0.0.1:8000/books")
+const res = await axios.get("https://library-backend-1z5w.onrender.com/books")
 setBooks(res.data)
 }
 
 const deleteBook = async(id)=>{
-await axios.delete(`http://127.0.0.1:8000/delete-book/${id}`)
+await axios.delete(`https://library-backend-1z5w.onrender.com/delete-book/${id}`)
 fetchBooks()
 }
 

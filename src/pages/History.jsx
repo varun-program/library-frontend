@@ -13,7 +13,7 @@ const fetchHistory = async () => {
 
 try{
 
-const res = await axios.get("http://127.0.0.1:8000/history")
+const res = await axios.get("https://library-backend-1z5w.onrender.com/history")
 
 setHistory(res.data)
 
